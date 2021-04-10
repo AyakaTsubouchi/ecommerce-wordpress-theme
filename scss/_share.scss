@@ -1,0 +1,50 @@
+@import "color";
+@import "font";
+
+ul{
+    list-style: none;
+}
+a,
+a:hover,
+a:active,
+a:focus,
+a:visited{
+    text-decoration: none;
+}
+.flex{
+    display: flex;
+}
+.sticky-body-space{
+    height: 100px;
+}
+.custom-btn{
+    a{
+        background-color: $btn-color;
+        color: white;
+        padding: 10px;
+        border-radius: 7px;
+    }
+    a:hover{
+        background-color: $btn-hover;
+    }
+}
+
+.page-header{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+   h2{
+       text-align: center;
+       color: white;
+       line-height: 300px;
+       font-size: 5rem;
+   }
+}
+
+nav.woocommerce-breadcrumb {
+    margin-left: 30px;
+    color: $secondary-color;
+    a {
+        color: $secondary-color;
+    }
+}

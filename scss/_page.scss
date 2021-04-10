@@ -1,0 +1,37 @@
+.page {
+    .page-header{
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+       h2{
+           text-align: center;
+           color: white;
+           line-height: 300px;
+           font-size: 5rem;
+       }
+    }
+    .content{
+        margin-top: 30px;
+    }
+    .sns-banner {
+        margin-top: 40px;
+        background-color: rgb(54, 54, 54);
+
+        text-transform: uppercase;
+        height: 250px;
+        padding: 50px;
+        h5 {
+            color: white;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        ul {
+            justify-content: center;
+            i {
+                color: white;
+                font-size: 3rem;
+                margin-left: 20px;
+            }
+        }
+    }
+}

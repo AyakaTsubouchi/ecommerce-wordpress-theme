@@ -1,0 +1,51 @@
+@import "color";
+
+header {
+    background: $background-color;
+    .flex {
+        justify-content: space-between;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+    }
+    li {
+        margin-left: 30px;
+    }
+    a {
+        color: $secondary-color;
+    }
+    .header-top {
+        padding-top: 20px;
+        padding-right: 20px;
+        .custom-btn {
+            margin-left: 20px;
+        }
+        .chw-widget{
+            ul{
+                display: flex;
+             li{
+                 a{
+                    font-size: 0.8rem;
+                 }
+             }
+            }
+        }
+    }
+    .header-main {
+        background-color: white;
+        padding: 20px 40px;
+        transition: all 0.5s;
+        a {
+            color: black;
+            margin-left: 10px;
+        }
+        .header-bottom-nav {
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+    }
+}

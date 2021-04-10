@@ -1,0 +1,77 @@
+.home {
+    overflow-x: hidden;
+    h5 {
+        text-align: center;
+    }
+    .home-slider {
+        img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    }
+    .home-banner {
+        background-color: rgb(54, 54, 54);
+
+        text-transform: uppercase;
+        height: 250px;
+        h5 {
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            line-height: 250px;
+        }
+    }
+    .home-prodcat {
+        .card {
+            background-size: contain;
+            width: 30%;
+            margin: 20px;
+            background-repeat: no-repeat;
+            background-position-x: right;
+            a {
+                p {
+                    margin-top: 50%;
+                    transform: translate(10px, -110px);
+                    color: black;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .home-blog {
+        .card {
+            width: 18rem;
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                object-position: top;
+            }
+            .meta {
+                display: flex;
+            }
+        }
+    }
+    .sns-banner {
+        background-color: rgb(54, 54, 54);
+
+        text-transform: uppercase;
+        height: 250px;
+        padding: 50px;
+        h5 {
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+        }
+        ul {
+            justify-content: center;
+            i {
+                color: white;
+                font-size: 3rem;
+                margin-left: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import 'color';
+.woocommerce{
+    .prod-main{
+        margin-top: 30px;
+    }
+    a{
+        color: $accent-color;
+    }
+    ul.products{
+        li.product{
+            border: 1px solid #ccc;
+            padding: 10px;
+            span.itsnew{
+                background-color: black;
+            }
+            h2{
+                font-size: 1.2rem;
+                color: black;
+                text-align: center;
+            }
+            .price{
+                color: $accent-color;
+                text-align: center;
+            }
+            .add_to_cart_button{
+                display: none;
+            }
+        }
+        
+    }
+   
+}
