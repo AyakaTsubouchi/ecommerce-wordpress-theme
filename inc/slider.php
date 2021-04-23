@@ -17,7 +17,7 @@
         ?>
 
                 <div class="carousel-item active carousel_one" style=" background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
-
+                    <h2> <?php echo the_title(); ?></h2>
                 </div>
 
 
@@ -32,7 +32,7 @@
         $gallery_post = get_posts(array(
             'post_type' => 'gallery',
             'posts_per_page' => 9,
-            'offset' => 1 
+            'offset' => 1
 
         ));
 

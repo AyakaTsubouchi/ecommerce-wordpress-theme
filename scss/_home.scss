@@ -1,14 +1,17 @@
 .home {
     overflow-x: hidden;
-    h5 {
+    h2 {
         text-align: center;
     }
     .home-slider {
-        img {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            object-position: bottom;
+        overflow: hidden;
+        height: auto;
+
+        .camera_wrap {
+            margin-bottom: 0 !important;
+            .camera_thumbs_cont {
+                display: none;
+            }
         }
     }
     .home-banner {
@@ -23,35 +26,132 @@
             line-height: 250px;
         }
     }
+
     .home-prodcat {
+        margin-top: 40px;
+        .card-wrapper {
+            position: relative;
+            width: 25%;
+            @media (max-width: 991px) {
+                width: 50%;
+            }
+            @media (max-width: 500px) {
+                width: 100%;
+            }
+            .card {
+                height: 100%;
+                width: 100%;
+                background-size: contain;
+                // width: 30%;
+                margin: 20px;
+                background-repeat: no-repeat;
+                background-position-x: right;
+                a {
+                    p {
+                        // margin-top: 50%;
+                        // transform: translate(10px, -110px);
+                        color: black;
+                        font-size: 1.5rem;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .hover-image {
+                display: none;
+                position: absolute;
+                top: 0;
+                background-color: rgba(0, 0, 0, 0.3);
+                z-index: 1;
+                height: 100%;
+                width: 100%;
+                .custom-btn {
+                    position: absolute;
+                    top: calc(50% - 20px);
+                    left: calc(50% - 50px);
+                    a {
+                        color: $accent-color;
+                    }
+                }
+            }
+        }
+        .card-wrapper:hover {
+            .hover-image {
+                display: block;
+            }
+        }
+    }
+    .home-review {
+        margin: 20px 0;
+        padding: 20px;
         .card {
-            background-size: contain;
-            width: 30%;
-            margin: 20px;
-            background-repeat: no-repeat;
-            background-position-x: right;
-            a {
+            .text {
+                position: absolute;
+                left: 110px;
+                h5 {
+                    text-align: left;
+                }
                 p {
-                    margin-top: 50%;
-                    transform: translate(10px, -110px);
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .home-featured-prod {
+        margin-top: 30px;
+        padding: 50px 0;
+        h2 {
+            margin-bottom: 40px;
+        }
+        .card-deck {
+            padding: 0px 20px;
+            .card {
+                text-align: center;
+                a {
                     color: black;
-                    font-size: 1.5rem;
+                    img {
+                        height: 300px;
+                        width: 100%;
+                        object-fit: contain;
+                    }
                 }
             }
         }
     }
     .home-blog {
+        margin-top: 30px;
+        background-color: $background-color;
+        padding: 50px 0;
+        h2 {
+            margin-bottom: 40px;
+        }
+        .card-deck {
+            padding: 0px 20px;
+            max-width: 1100px;
+
+            margin: 0 auto;
+            .card {
+                a {
+                    color: $accent-color;
+                }
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    object-position: top;
+                }
+                .meta {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    .home-review {
         .card {
-            width: 18rem;
-            img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                object-position: top;
-            }
-            .meta {
-                display: flex;
-            }
+            padding-top: 10px;
+            padding-bottom: 15px;
         }
     }
     .sns-banner {
@@ -71,6 +171,19 @@
                 color: white;
                 font-size: 3rem;
                 margin-left: 20px;
+            }
+        }
+        @media (max-width: 500px) {
+            height: 150px;
+            padding: 40px;
+            h5 {
+                font-size: 1.5rem;
+            }
+            ul {
+                padding-left: 0;
+                i {
+                    font-size: 1rem;
+                }
             }
         }
     }

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="robots" content="noindex,nofollow">
@@ -10,17 +11,20 @@
    <meta name="author" content="">
 
    <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
+ 
    <div class="overflow">
       <header>
          <div class="header-top flex">
             <ul class="sns flex">
-               <li><i class="fas fa-headset"></i>+1 111-111-1111</li>
+               <li><i class="fas fa-headset"></i><?php
+							echo get_field("phone", 533); ?> </li>
                <li>
                   <?php if (get_field("instagram_link", 533))
-                     echo '<a href="' . get_field("finstagram_link", 533) . '" target="_blank" ><i class="fab fa-instagram"></i></a>' ?>
+                     echo '<a href="' . get_field("instagram_link", 533) . '" target="_blank" ><i class="fab fa-instagram"></i></a>' ?>
                   <?php if (get_field("facebook_link", 533))
                      echo '<a href="' . get_field("facebook_link", 533) . '" target="_blank" ><i class="fab fa-facebook-f"></i></a>' ?>
                   <?php if (get_field("twitter_link", 533))
@@ -30,30 +34,43 @@
                   <?php if (get_field("youtube_link", 533))
                      echo '<a href="' . get_field("youtube_link", 533) . '" target="_blank" ><i class="fab fa-youtube"></i></a>' ?></li>
             </ul>
-            <ul class="header-top-nav flex">
-               <li class="menu-item">
-                  <a href="/about">about</a>
-               </li>
-               <li class="menu-item">
-                  <a href="/contact-us">contact us</a>
-               </li>
-               <li class="menu-item">
-                  <a href="/about">about</a>
-               </li>
-            </ul>
+            <div class="header-top-nav flex">
+               <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+                  <div class="container">
+                     <!-- Brand and toggle get grouped for better mobile display -->
+
+
+                     <?php
+                     wp_nav_menu(array(
+                        'theme_location'    => 'primary_menu',
+                        'depth'             => 2,
+                        'container'         => 'div',
+                        'container_class'   => 'collapse navbar-collapse',
+                        'container_id'      => 'bs-example-navbar-collapse-1',
+                        'menu_class'        => 'nav navbar-nav',
+                        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                        'walker'            => new WP_Bootstrap_Navwalker(),
+                     ));
+                     ?>
+                  </div>
+               </nav>
+            </div>
             <?php
-                         if (is_active_sidebar('custom-header-widget')) {
-                               dynamic_sidebar('custom-header-widget');
-                            }
-                      ?>
-            <!-- <div class="custom-btn">
-               <a href="#">My Wishlist</a>
-            </div> -->
+            if (is_active_sidebar('custom-header-widget')) {
+               dynamic_sidebar('custom-header-widget');
+            }
+            ?>
+
          </div>
          <div class="header-main flex">
             <div class="logo">
-               <h1>KUMME</h1>
+               <a href="/">
+                  <h1>KUMME</h1>
+               </a>
             </div>
+            <a class="open nav-toggler">
+               <i class="fas fa-bars"></i>
+            </a>
             <ul class="header-bottom-nav flex">
                <?php
                $taxonomy     = 'product_cat';
@@ -98,19 +115,26 @@
                }
                ?>
             </ul>
-            <div class="function-box">
-               <a href="#" class="search"><i class="fas fa-search"></i></a>
-               <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+            <div class="search-box">
+
+               <!-- <a href="#" class="search show-on-mobile"><i class="fas fa-search"></i></a> -->
+
+               <div class="dropdown-box show-on-pc">
+                  <?php
+                  if (is_active_sidebar('custom-header-widget2')) {
+                     dynamic_sidebar('custom-header-widget2');
+                  }
+                  ?>
+               </div>
+
 
 
             </div>
 
-
-
-
-
-
-
-
       </header>
+
+      <?php
+      include('inc/sidebar.php');
+      ?>
       <div class="addspace"></div>
+      <!-- <div id="main"> -->

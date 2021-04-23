@@ -1,0 +1,40 @@
+.single-blog{
+    .container{
+        .woocommerce-breadcrumb{
+               margin-left: 0; 
+        }
+        .contents{
+           
+            .row{
+                .left-col{
+                    img{
+                        width: 100%;
+                    }
+                }
+                .right-col{
+                    a{
+                        color: black;
+                    }
+                }
+            }
+        }
+        .related-product {
+            margin: 30px 0px;
+            .card-deck {
+                padding: 0px 20px;
+                .card {
+                    text-align: center;
+                    a {
+                        color: black;
+                        img {
+                            height: 300px;
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}

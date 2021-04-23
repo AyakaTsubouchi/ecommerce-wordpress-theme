@@ -1,44 +1,57 @@
 @import "color";
 @import "font";
 
-ul{
+ul {
     list-style: none;
 }
 a,
 a:hover,
 a:active,
 a:focus,
-a:visited{
+a:visited {
     text-decoration: none;
 }
-.flex{
+.flex {
     display: flex;
+    flex-wrap: wrap;
 }
-.sticky-body-space{
+.sticky-body-space {
     height: 100px;
 }
-.custom-btn{
-    a{
+.custom-btn {
+    a {
         background-color: $btn-color;
         color: white;
         padding: 10px;
         border-radius: 7px;
     }
-    a:hover{
+    a:hover {
         background-color: $btn-hover;
     }
 }
 
-.page-header{
+.page-header {
     height: 300px;
     background-size: cover;
     background-position: center;
-   h2{
-       text-align: center;
-       color: white;
-       line-height: 300px;
-       font-size: 5rem;
-   }
+    h2 {
+        text-align: center;
+        color: white;
+        line-height: 300px;
+        font-size: 5rem;
+    }
+    @media (max-width: 500px) {
+        height: 200px;
+        h2 {
+            font-size: 3rem;
+        }
+    }
+    @media (max-width: 330px) {
+        height: 150px;
+        h2 {
+            font-size: 2rem;
+        }
+    }
 }
 
 nav.woocommerce-breadcrumb {
@@ -48,3 +61,7 @@ nav.woocommerce-breadcrumb {
         color: $secondary-color;
     }
 }
+.overflow {
+    overflow-x: hidden;
+}
+

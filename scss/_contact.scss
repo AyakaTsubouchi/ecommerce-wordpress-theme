@@ -1,0 +1,122 @@
+@import "color";
+.contactus {
+    h2 {
+        // font-weight: 100;
+        line-height: 75px;
+        span {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+        }
+
+        span:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            border-top: 2px solid $accent-color;
+            top: 39px;
+            width: calc(100% - 00px);
+        }
+
+        span:after {
+            margin-left: 10px;
+        }
+    }
+    h3,
+    h5 {
+        color: $accent-color;
+    }
+    .google-map {
+        height: 400px;
+    }
+    img.map {
+        height: 400px;
+    }
+    input.custom-btn {
+        transition: 0.2s;
+        color: white;
+        background: $accent-color;
+        // padding: 6px 34px;
+        border-radius: 16px;
+        text-decoration: none;
+        width: 100px;
+    }
+    input.custom-btn:hover {
+        background: white;
+        border: 1px solid $accent-color;
+        color: $accent-color;
+        cursor: pointer;
+    }
+    .contact-section {
+        margin-top: 40px;
+        p.title {
+            color: $accent-color;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        .get-quote {
+            margin-top: 40px;
+            .custom-btn {
+                margin-top: 15px;
+            }
+        }
+        .sns {
+            .sns-box {
+                display: flex;
+                i {
+                    margin: 10px 10px 10px 0;
+                    background: green;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 22px;
+                }
+                .fa-facebook-f {
+                    padding: 10px 13px 10px 13px;
+                }
+            }
+        }
+        .quote {
+            margin-top: 0px !important;
+            label,
+            p {
+                font-size: 13px;
+            }
+        }
+        .contactus-form {
+            padding: 20px;
+            background: #ccc;
+            color: gray;
+
+            .form-wrapper {
+                background: white;
+                padding: 10px;
+                .form-row {
+                    margin-top: 10px;
+                    label {
+                        margin-bottom: 0;
+                        font-size: 13px;
+                        color: $accent-color;
+                    }
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 1.2;
+                    margin-top: 10px;
+                }
+                .form-custom-btn {
+                    background-color: $accent-color;
+                    color: white;
+                    width: auto;
+                    border-radius: 18px;
+                    margin-top: 10px;
+                }
+                .form-custom-btn:hover {
+                    background-color: white;
+                    color: $accent-color;
+                    border: 1px solid $accent-color;
+                }
+            }
+        }
+    }
+}

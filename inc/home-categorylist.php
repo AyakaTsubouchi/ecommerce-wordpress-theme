@@ -29,11 +29,23 @@ foreach ($all_categories as $cat) {
         $category_id = $cat->term_id;
         $cat_id = "product_cat_$category_id"
 ?>
-        <div class="card" style="background-image:url('<?php echo $image; ?>'); height: 200px;">
-            <a href="<?php echo  get_term_link($cat->slug, 'product_cat');  ?>">
-                <p><?php echo  $cat->name;  ?></p>
-            </a>
+        <div class="card-wrapper">
+            <div class="card">
+                <a href="<?php echo  get_term_link($cat->slug, 'product_cat');  ?>">
+                    <p><?php echo  $cat->name;  ?></p>
+                    <img src="<?php echo $image; ?>">
+                </a>
+            </div>
+            <div class="card hover-image">
+              
+                    <div class="custom-btn">
+                        <a href="<?php echo get_term_link($cat->slug, 'product_cat');  ?>">VIEW MORE</a>
+                    </div>
+
+                </a>
+            </div>
         </div>
+
 
 
 

@@ -19,9 +19,32 @@
             padding-top: 30px;
             font-size: 2rem;
         }
+        @media (max-width:770px) {
+            h2{
+               
+                font-size: 3rem;
+            }
+           }
+        @media (max-width:500px) {  
+            padding-top: 80px;  
+            h2{
+                font-size: 2rem;
+            }
+            p {            
+                font-size: 1rem;
+            }
+        }
+        @media (max-width:330px) {   
+            padding-top: 60px; 
+           
+            p {            
+                font-size: 1rem;
+            }
+        }
     }
 
     .sidebar {
+        margin-top: 40px;
         @media (max-width: 991px) {
             display: none;
         }
@@ -75,11 +98,22 @@
                 
             }
         }
+        .widget-odd, .widget-even{
+            margin-top: 20px;
+        }
     }
     .mobile-sidebar {
         display: none;
         @media (max-width: 991px) {
             display: block;
+        }
+    }
+    
+    .woocommerce-ordering{
+        .orderby{
+            margin:1px 2px;
+            border-color: rgb(199, 199, 199);
+            
         }
     }
 }

@@ -33,7 +33,9 @@ get_header();
  */
 do_action('woocommerce_before_main_content');
 ?>
-<?php $product_id = get_the_ID();
+<?php 
+
+$product_id = get_the_ID();
 $product = wc_get_product($product_id);
 $rating  = $product->get_average_rating();
 $num_of_review = $product->get_review_count();
@@ -80,8 +82,8 @@ if (!empty($terms) && !is_wp_error($terms)) {
 ?>
 <section class="page-header" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images.unsplash.com/photo-1483137140003-ae073b395549?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80');">
     <div class="title">
-        <h2>2021 Mother's Day</h2>
-        <p>2021 summer sale or something</p>
+        <h2>Happy Mother's Day</h2>
+        <p>May 9, 2021</p>
     </div>
 
 </section>
