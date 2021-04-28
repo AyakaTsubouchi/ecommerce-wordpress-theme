@@ -63,7 +63,7 @@ $brand = $product->get_attribute('brand');
 $desc = $product->get_attribute('description');
 
 $commentCount = $product->get_review_count();
-$sku = $product->get_sku();
+// $sku = $product->get_sku();
 $product_tags = get_the_term_list($product_id, 'product_tag', '', '');
 $product_category = get_the_term_list($product_id, 'product_cat', '', ',');
 $regular_price = $product->get_regular_price();
@@ -142,7 +142,7 @@ if (!empty($terms) && !is_wp_error($terms)) {
             </div>
 
             <div class="base-info">
-                <p class="sku">SKU: <?php echo $sku; ?></p>
+                <!-- <p class="sku">SKU: <?php echo $sku; ?></p> -->
                 <p class="categories">Categories: <?php echo $product_category; ?></p>
                 <p class="tags">Tags: <?php echo $product_tags; ?></p>
             </div>
@@ -156,7 +156,7 @@ if (!empty($terms) && !is_wp_error($terms)) {
                 <?php
 
                 do_action('woocommerce_after_single_product_summary');
-                // do_action( 'woocommerce_after_main_content' );
+ 
                 ?>
 
             </div>

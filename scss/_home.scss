@@ -3,17 +3,7 @@
     h2 {
         text-align: center;
     }
-    .home-slider {
-        overflow: hidden;
-        height: auto;
 
-        .camera_wrap {
-            margin-bottom: 0 !important;
-            .camera_thumbs_cont {
-                display: none;
-            }
-        }
-    }
     .home-banner {
         background-color: rgb(54, 54, 54);
 
@@ -29,6 +19,7 @@
 
     .home-prodcat {
         margin-top: 40px;
+        margin-right: 40px;
         .card-wrapper {
             position: relative;
             width: 25%;
@@ -42,19 +33,30 @@
                 height: 100%;
                 width: 100%;
                 background-size: contain;
-                // width: 30%;
                 margin: 20px;
                 background-repeat: no-repeat;
                 background-position-x: right;
                 a {
                     p {
-                        // margin-top: 50%;
-                        // transform: translate(10px, -110px);
+                        padding-left: 30px;
+                        padding-top: 20px;
                         color: black;
-                        font-size: 1.5rem;
+                        font-size: 2rem;
                     }
                     img {
                         width: 100%;
+                        @media (max-width: 500px) {
+                            width: 150px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+                        @media (max-width: 450px) {
+                            width: 100%;
+                            position: relative;
+                            top: 0;
+                            right: 0;
+                        }
                     }
                 }
             }
@@ -79,6 +81,12 @@
         .card-wrapper:hover {
             .hover-image {
                 display: block;
+            }
+            @media (max-width:991px) {
+                .hover-image {
+                    display: none;
+                }
+               
             }
         }
     }
@@ -125,6 +133,7 @@
         padding: 50px 0;
         h2 {
             margin-bottom: 40px;
+            color: black;
         }
         .card-deck {
             padding: 0px 20px;

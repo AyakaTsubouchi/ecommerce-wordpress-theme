@@ -1,7 +1,10 @@
 @import "color";
 .contactus {
+    color: $main-color;
+    a{
+        color: $main-color;
+    }
     h2 {
-        // font-weight: 100;
         line-height: 75px;
         span {
             display: inline-block;
@@ -26,17 +29,20 @@
     h5 {
         color: $accent-color;
     }
-    .google-map {
-        height: 400px;
+    .map{
+        margin-top: 30px;
+        .google-map {
+            height: 500px;
+        }
     }
-    img.map {
-        height: 400px;
-    }
+    
+    // img.map {
+    //     height: 400px;
+    // }
     input.custom-btn {
         transition: 0.2s;
         color: white;
         background: $accent-color;
-        // padding: 6px 34px;
         border-radius: 16px;
         text-decoration: none;
         width: 100px;
@@ -85,12 +91,7 @@
         }
         .contactus-form {
             padding: 20px;
-            background: #ccc;
             color: gray;
-
-            .form-wrapper {
-                background: white;
-                padding: 10px;
                 .form-row {
                     margin-top: 10px;
                     label {
@@ -104,19 +105,18 @@
                     line-height: 1.2;
                     margin-top: 10px;
                 }
-                .form-custom-btn {
-                    background-color: $accent-color;
-                    color: white;
+                .custom_btn {
+                    background-color: black;
+                    color: $accent-color;
                     width: auto;
                     border-radius: 18px;
                     margin-top: 10px;
                 }
-                .form-custom-btn:hover {
-                    background-color: white;
-                    color: $accent-color;
-                    border: 1px solid $accent-color;
+                .custom_btn:hover {
+                    background-color: rgb(70, 70, 70);
+                 
                 }
-            }
+            
         }
     }
 }

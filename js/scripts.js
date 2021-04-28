@@ -100,36 +100,6 @@ End of Header
 -------------------------------------*/
 
 /*--------------------------------------
-/*--------------------------------------
-HOME
------------------------------------------------------*/
-
-
-/*--------------------------------------
-End of HOME
--------------------------------------*/
-
-/*--------------------------------------
-Gallery page
--------------------------------------*/
-
-// camera js
-$(document).ready(function() {
-  $('#gallery-camera_wrap_3').camera({
-    height: '60%',
-    hover: true,
-    time:1000,
-    pagination: false,
-    thumbnails: true,
-    fx: 'random',
-    // imagePath: '../images/',
-    onLoaded: function(){
-      var slide = jQuery('.camera_target .cameraSlide.cameranext').index();
-        console.log(slide);
-       
-    }        
-});
-});
 
 /*--------------------------------------
 End of Gallery page

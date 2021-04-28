@@ -13,45 +13,27 @@ if (have_posts()) :
 ?>
 		<div class="home">
 
-
 			<section class="home-slider">
-				<div class="gallery container">
-					<div class="fluid_container">
-						<div class="camera_wrap camera_emboss" id="gallery-camera_wrap_3">
-
-							<?php
-							global $post;
-
-							$gallery_post = get_posts(array(
-								'post_type' => 'slider',
-								'posts_per_page' => 100,
-							));
-							$count = wp_count_posts('gallery')->publish;
-
-
-							if ($gallery_post) {
-								foreach ($gallery_post as $post) :
-									setup_postdata($post);
-							?>
-									<div data-thumb="<?php echo get_the_post_thumbnail_url(); ?>" data-src="<?php echo get_the_post_thumbnail_url(); ?>">
-									</div>
-							<?php
-								endforeach;
-								wp_reset_postdata();
-							}
-							?>
-						</div>
-					</div>
-				</div>
+				<?php
+					$current_lang = pll_current_language();
+					if ($current_lang === 'zh') {
+	
+						echo do_shortcode('[smartslider3 slider="3"]');
+					} else {
+						echo do_shortcode('[smartslider3 slider="2"]');
+					}
+?>
+			
 			</section>
 
 			<section class="home-prodcat">
-			<h2>Categories</h2>
-			<div class="flex">
-				<?php include('inc/home-categorylist.php'); ?>
-			</div>
+				<h2>Categories</h2>
+				<div class="flex">
+					<?php include('inc/home-categorylist.php'); ?>
+				</div>
 
-			</section>
+			</section> 
+			
 			<section class="home-featured-prod">
 				<h2>WHAT'S NEW</h2>
 				<div class="card-deck flex">
@@ -79,7 +61,9 @@ if (have_posts()) :
 				</div>
 			</section>
 			<section class="home-blog">
-				<h2>NEWS & POSTS</h2>
+				<a href="/blogs">
+					<h2>NEWS & POSTS</h2>
+				</a>
 				<div class="card-deck flex">
 					<?php
 
@@ -110,10 +94,7 @@ if (have_posts()) :
 									<div class="meta">
 										<p><?php the_author(); ?></p>
 										<div class="icons flex">
-											<!-- <p class="like">
-											12
-											<i class="fas fa-heart"></i>
-										</p> -->
+										
 											<p class="comment">
 												<?php
 
@@ -124,7 +105,7 @@ if (have_posts()) :
 
 									</div>
 									<h5 class="card-title"><?php echo the_title(); ?></h5>
-									<p class="card-text"><?php echo get_the_excerpt(); ?></p>
+
 									<div class="custom-btn">
 										<a href="<?php the_permalink(); ?>" class="btn">Read More</a>
 									</div>
@@ -149,12 +130,7 @@ if (have_posts()) :
 					<?php echo do_shortcode('[woo_reviews]'); ?>
 				</div>
 			</section>
-			<section class="home-gallery">
-				<!-- GALLERY -->
-			</section>
-			<section class="home-discount">
-				<!-- SPECIAL OFFERS -->
-			</section>
+<!-- 			
 			<section class="sns-banner">
 				<h5>FOLLOW US TO GET A DISCOUNT</h5>
 				<ul class="sns flex">
@@ -182,7 +158,7 @@ if (have_posts()) :
 							echo '<a href="' . get_field("youtube_link", 533) . '" target="_blank" ><i class="fab fa-youtube"></i></a>' ?></li>
 
 				</ul>
-			</section>
+			</section> -->
 
 
 		</div>

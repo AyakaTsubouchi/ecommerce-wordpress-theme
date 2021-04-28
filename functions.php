@@ -18,8 +18,7 @@ function load_stylesheets()
 
   wp_register_style('fontawsome', get_template_directory_uri() . '/css/fontawesome.min.css', array(), false, 'all');
   wp_enqueue_style('fontawsome');
-  wp_register_style('camera', get_template_directory_uri() . '/css/camera.css', array(), false, 'all');
-  wp_enqueue_style('camera');
+ 
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 
@@ -60,9 +59,6 @@ function load_js()
   wp_register_script('jquery-ui', get_template_directory_uri() . '/js/jquery-ui.min.js', '', 1, true);
   wp_enqueue_script('jquery-ui');
 
-
-  wp_register_script('camera', get_template_directory_uri() . '/js/camera.min.js', '', 1, true);
-  wp_enqueue_script('camera');
 }
 add_action('wp_enqueue_scripts', 'load_js');
 
@@ -164,6 +160,22 @@ function header_widgets_init()
   ));
 }
 add_action('widgets_init', 'header_widgets_init');
+
+
+// Register widget area.
+function header_catnav_widgets_init()
+
+{
+  register_sidebar(array(
+    'name'          => 'Header Widget Category Nav',
+    'id'            => 'custom-header-catnav',
+    'before_widget' => '<div class="chw-widget">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="chw-title">',
+    'after_title'   => '</h2>',
+  ));
+}
+add_action('widgets_init', 'header_catnav_widgets_init');
 
 // Register widget area.
 function shop_sidebar_init()

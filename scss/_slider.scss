@@ -1,0 +1,23 @@
+.home-slider {
+    overflow: hidden;
+    height: auto;
+.gallery{
+    width: 100%;
+}
+    .camera_wrap {
+        height: 905px;
+        // margin-top: -200px;
+        margin-bottom: 0 !important;
+        .camera_fakeover{
+            img{
+                object-fit: scale-down;
+            }
+        }
+        .camera_thumbs_cont {
+            display: none;
+        }
+        .cameraContent{
+            object-fit: scale-down;
+        }
+    }
+}

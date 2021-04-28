@@ -13,11 +13,14 @@
         if ($gallery_post) {
             foreach ($gallery_post as $post) :
                 setup_postdata($post);
+                
+                $content = get_field('content_text');
+               
 
         ?>
 
                 <div class="carousel-item active carousel_one" style=" background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
-                    <h2> <?php echo the_title(); ?></h2>
+                    <h2> <?php echo $content; ?></h2>
                 </div>
 
 

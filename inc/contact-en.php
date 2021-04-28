@@ -47,8 +47,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-5">
-
+			<div class="col-lg-5 contactus-form">
 				<h3>Lave Us A Message</h3>
 				<p>(Note: * is required.)</p>
 				<?php echo do_shortcode('[contact-form-7 id="645" title="interior contact form (EN)"]') ?>

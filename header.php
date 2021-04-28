@@ -15,13 +15,13 @@
 </head>
 
 <body <?php body_class(); ?>>
- 
+
    <div class="overflow">
       <header>
          <div class="header-top flex">
             <ul class="sns flex">
                <li><i class="fas fa-headset"></i><?php
-							echo get_field("phone", 533); ?> </li>
+                                                   echo get_field("phone", 533); ?> </li>
                <li>
                   <?php if (get_field("instagram_link", 533))
                      echo '<a href="' . get_field("instagram_link", 533) . '" target="_blank" ><i class="fab fa-instagram"></i></a>' ?>
@@ -35,7 +35,7 @@
                      echo '<a href="' . get_field("youtube_link", 533) . '" target="_blank" ><i class="fab fa-youtube"></i></a>' ?></li>
             </ul>
             <div class="header-top-nav flex">
-               <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+               <nav class="navbar navbar-expand-md navbar-light" role="navigation">
                   <div class="container">
                      <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -71,50 +71,15 @@
             <a class="open nav-toggler">
                <i class="fas fa-bars"></i>
             </a>
-            <ul class="header-bottom-nav flex">
+            <div class="header-bottom-nav">
                <?php
-               $taxonomy     = 'product_cat';
-               $orderby      = 'name';
-               $show_count   = 0;      // 1 for yes, 0 for no
-               $pad_counts   = 0;      // 1 for yes, 0 for no
-               $hierarchical = 0;      // 1 for yes, 0 for no  
-               $title        = '';
-               $empty        = 0;
-               $args = array(
-                  'taxonomy'     => $taxonomy,
-                  'orderby'      => $orderby,
-                  'show_count'   => $show_count,
-                  'pad_counts'   => $pad_counts,
-                  // 'hierarchical' => $hierarchical,
-                  'title_li'     => $title,
-                  'hide_empty'   => $empty,
-               );
-               $allcats = get_categories($args); // get ALL categories 
-               // $allcats = get_the_category(); // get only categories assigned to post
-               $parents = $all_ids = array();
-
-               //  find parents
-               foreach ($allcats as $cats) {
-                  if ($cats->category_parent === 0) {
-                     $cats->children = array();
-                     $parents[] =  $cats;
-                  }
-               }
-
-               foreach ($parents as $parent) {
-                  if ($parent->slug === 'uncategorized') {
-                     continue;
-                  }
-                  $p_category_id = $parent->term_id;
-                  $p_cat_id = "product_cat_$p_category_id"
-               ?>
-                  <a href="<?php echo  get_term_link($parent->slug, 'product_cat');  ?>">
-                     <p><?php echo $parent->name; ?></p>
-                  </a>
-               <?php
+               if (is_active_sidebar('custom-header-catnav')) {
+                  dynamic_sidebar('custom-header-catnav');
                }
                ?>
-            </ul>
+         
+
+            </div>
             <div class="search-box">
 
                <!-- <a href="#" class="search show-on-mobile"><i class="fas fa-search"></i></a> -->
@@ -136,5 +101,5 @@
       <?php
       include('inc/sidebar.php');
       ?>
-      <div class="addspace"></div>
+      <!-- <div class="addspace"></div> -->
       <!-- <div id="main"> -->
